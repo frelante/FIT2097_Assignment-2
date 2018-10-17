@@ -1,0 +1,14 @@
+﻿  Creating makefile for hot reloading Assignment2Editor (modules to compile have changed)
+  Compiling game modules for hot reload
+  Performing full C++ include scan (no include cache file)
+  Parsing headers for Assignment2Editor
+    Running UnrealHeaderTool "G:\FORTNITE\Assignment2\Assignment2.uproject" "G:\FORTNITE\Assignment2\Intermediate\Build\Win64\Assignment2Editor\Development\Assignment2Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for Assignment2Editor in 7.4986462 seconds
+  Performing 3 actions (4 in parallel)
+  Assignment2Character.cpp
+  [2/3] Link UE4Editor-Assignment2-3082.dll
+  [3/3] Link UE4Editor-Assignment2-3082.lib
+     Creating library G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Assignment2-3082.lib and object G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Assignment2-3082.exp
+     Creating library G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Assignment2-3082.suppressed.lib and object G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Assignment2-3082.suppressed.exp
+  Deploying Assignment2Editor Win64 Development...
+  Total build time: 24.85 seconds (Local executor: 10.58 seconds)
