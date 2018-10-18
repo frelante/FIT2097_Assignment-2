@@ -1,6 +1,11 @@
 ﻿  Creating makefile for hot reloading Assignment2Editor (modules to compile have changed)
   Compiling game modules for hot reload
-  Performing 4 actions (4 in parallel)
-  Assignment2Character.cpp
-  Damagefire.cpp
+  Parsing headers for Assignment2Editor
+    Running UnrealHeaderTool "G:\FORTNITE\Assignment2\Assignment2.uproject" "G:\FORTNITE\Assignment2\Intermediate\Build\Win64\Assignment2Editor\Development\Assignment2Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for Assignment2Editor in 7.7537933 seconds
+  Performing 7 actions (4 in parallel)
+  Assignment2Character.gen.cpp
+  Assignment2GameMode.cpp
+  HealthPack.cpp
+  Assignment2.init.gen.cpp
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.MakeFile.Targets(41,5): warning MSB5021: "cmd" and its child processes are being terminated in order to cancel the build.

@@ -97,6 +97,7 @@ void AAssignment2Character::BeginPlay()
 	Health = FullHealth;
 	HealthPercentage = 1.0f;
 	bCanBeDamaged = true;
+	hasKey = false;
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
@@ -366,7 +367,6 @@ void AAssignment2Character::DamageTimer()
 float AAssignment2Character::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser)
 {
 	bCanBeDamaged = false;
-	redFlash = true;
 	UpdateHealth(-DamageAmount);
 	DamageTimer();
 	return DamageAmount;
@@ -377,4 +377,3 @@ void AAssignment2Character::UpdateHealth(float HealthChange)
 	Health = FMath::Clamp(Health += HealthChange, 0.0f, FullHealth);
 	HealthPercentage = Health / FullHealth;
 }
-

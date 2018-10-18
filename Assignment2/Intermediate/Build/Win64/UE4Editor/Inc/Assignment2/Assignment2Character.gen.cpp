@@ -179,13 +179,21 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 			};
 #endif
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_redFlash_MetaData[] = {
-				{ "Category", "Health" },
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_hasKey_MetaData[] = {
+				{ "Category", "HasKey" },
 				{ "ModuleRelativePath", "Assignment2Character.h" },
 			};
 #endif
-			auto NewProp_redFlash_SetBit = [](void* Obj){ ((AAssignment2Character*)Obj)->redFlash = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_redFlash = { UE4CodeGen_Private::EPropertyClass::Bool, "redFlash", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AAssignment2Character), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_redFlash_SetBit)>::SetBit, METADATA_PARAMS(NewProp_redFlash_MetaData, ARRAY_COUNT(NewProp_redFlash_MetaData)) };
+			auto NewProp_hasKey_SetBit = [](void* Obj){ ((AAssignment2Character*)Obj)->hasKey = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_hasKey = { UE4CodeGen_Private::EPropertyClass::Bool, "hasKey", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AAssignment2Character), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_hasKey_SetBit)>::SetBit, METADATA_PARAMS(NewProp_hasKey_MetaData, ARRAY_COUNT(NewProp_hasKey_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_hasFuse_MetaData[] = {
+				{ "Category", "HasFuse" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+			};
+#endif
+			auto NewProp_hasFuse_SetBit = [](void* Obj){ ((AAssignment2Character*)Obj)->hasFuse = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_hasFuse = { UE4CodeGen_Private::EPropertyClass::Bool, "hasFuse", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AAssignment2Character), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_hasFuse_SetBit)>::SetBit, METADATA_PARAMS(NewProp_hasFuse_MetaData, ARRAY_COUNT(NewProp_hasFuse_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HealthPercentage_MetaData[] = {
 				{ "Category", "Health" },
@@ -340,7 +348,8 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1P = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1P", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AAssignment2Character, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1P_MetaData, ARRAY_COUNT(NewProp_Mesh1P_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_redFlash,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_hasKey,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_hasFuse,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HealthPercentage,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Health,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FullHealth,
@@ -378,7 +387,7 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAssignment2Character, 3060574477);
+	IMPLEMENT_CLASS(AAssignment2Character, 2879333058);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAssignment2Character(Z_Construct_UClass_AAssignment2Character, &AAssignment2Character::StaticClass, TEXT("/Script/Assignment2"), TEXT("AAssignment2Character"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAssignment2Character);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

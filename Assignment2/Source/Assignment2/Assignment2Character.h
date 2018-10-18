@@ -94,8 +94,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 		float HealthPercentage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-		bool redFlash;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "HasFuse")
+		bool hasFuse;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "HasKey")
+		bool hasKey;
 
 	float CurveFloatValue;
 	float TimelineValue;
