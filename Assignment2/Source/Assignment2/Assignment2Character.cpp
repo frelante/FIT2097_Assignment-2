@@ -98,6 +98,7 @@ void AAssignment2Character::BeginPlay()
 	HealthPercentage = 1.0f;
 	bCanBeDamaged = true;
 	hasKey = false;
+	hasFuse = false;
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
