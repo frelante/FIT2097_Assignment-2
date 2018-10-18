@@ -12,6 +12,9 @@
 #include "MotionControllerComponent.h"
 #include "Engine.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "Kismet/KismetMathLibrary.h"
+#include "TimerManager.h"
+#include "Components/TimelineComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -90,6 +93,11 @@ void AAssignment2Character::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
+	FullHealth = 100.0f;
+	Health = FullHealth;
+	HealthPercentage = 1.0f;
+	bCanBeDamaged = true;
+
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 
@@ -104,6 +112,13 @@ void AAssignment2Character::BeginPlay()
 		VR_Gun->SetHiddenInGame(true, true);
 		Mesh1P->SetHiddenInGame(false, true);
 	}
+}
+
+void AAssignment2Character::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (MyTimeline != nullptr) MyTimeline->TickComponent(DeltaTime, ELevelTick::LEVELTICK_TimeOnly, nullptr);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -323,3 +338,43 @@ void AAssignment2Character::PerformRaycast()
 	}
 
 }
+
+float AAssignment2Character::GetHealth()
+{
+	return HealthPercentage;
+}
+
+FText AAssignment2Character::GetHealthIntText()
+{
+	int32 HP = FMath::RoundHalfFromZero(HealthPercentage * 100);
+	FString HPS = FString::FromInt(HP);
+	FString HealthHUD = HPS + FString(TEXT("%"));
+	FText HPText = FText::FromString(HealthHUD);
+	return HPText;
+}
+
+void AAssignment2Character::SetDamageState()
+{
+	bCanBeDamaged = true;
+}
+
+void AAssignment2Character::DamageTimer()
+{
+	GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &AAssignment2Character::SetDamageState, 2.0f, false);
+}
+
+float AAssignment2Character::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser)
+{
+	bCanBeDamaged = false;
+	redFlash = true;
+	UpdateHealth(-DamageAmount);
+	DamageTimer();
+	return DamageAmount;
+}
+
+void AAssignment2Character::UpdateHealth(float HealthChange)
+{
+	Health = FMath::Clamp(Health += HealthChange, 0.0f, FullHealth);
+	HealthPercentage = Health / FullHealth;
+}
+

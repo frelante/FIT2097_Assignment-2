@@ -17,6 +17,11 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 	ASSIGNMENT2_API UClass* Z_Construct_UClass_AAssignment2Character();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Assignment2();
+	ASSIGNMENT2_API UFunction* Z_Construct_UFunction_AAssignment2Character_DamageTimer();
+	ASSIGNMENT2_API UFunction* Z_Construct_UFunction_AAssignment2Character_GetHealth();
+	ASSIGNMENT2_API UFunction* Z_Construct_UFunction_AAssignment2Character_GetHealthIntText();
+	ASSIGNMENT2_API UFunction* Z_Construct_UFunction_AAssignment2Character_SetDamageState();
+	ASSIGNMENT2_API UFunction* Z_Construct_UFunction_AAssignment2Character_UpdateHealth();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -29,6 +34,122 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 // End Cross Module References
 	void AAssignment2Character::StaticRegisterNativesAAssignment2Character()
 	{
+		UClass* Class = AAssignment2Character::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "DamageTimer", &AAssignment2Character::execDamageTimer },
+			{ "GetHealth", &AAssignment2Character::execGetHealth },
+			{ "GetHealthIntText", &AAssignment2Character::execGetHealthIntText },
+			{ "SetDamageState", &AAssignment2Character::execSetDamageState },
+			{ "UpdateHealth", &AAssignment2Character::execUpdateHealth },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_AAssignment2Character_DamageTimer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+				{ "ToolTip", "Damage Timer" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAssignment2Character, "DamageTimer", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AAssignment2Character_GetHealth()
+	{
+		struct Assignment2Character_eventGetHealth_Parms
+		{
+			float ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Float, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, STRUCT_OFFSET(Assignment2Character_eventGetHealth_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Health" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+				{ "ToolTip", "Get Health" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAssignment2Character, "GetHealth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, sizeof(Assignment2Character_eventGetHealth_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AAssignment2Character_GetHealthIntText()
+	{
+		struct Assignment2Character_eventGetHealthIntText_Parms
+		{
+			FText ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FTextPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Text, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, STRUCT_OFFSET(Assignment2Character_eventGetHealthIntText_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Health" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+				{ "ToolTip", "Get Health Text" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAssignment2Character, "GetHealthIntText", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, sizeof(Assignment2Character_eventGetHealthIntText_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AAssignment2Character_SetDamageState()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+				{ "ToolTip", "Set Damage State" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAssignment2Character, "SetDamageState", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AAssignment2Character_UpdateHealth()
+	{
+		struct Assignment2Character_eventUpdateHealth_Parms
+		{
+			float HealthChange;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HealthChange = { UE4CodeGen_Private::EPropertyClass::Float, "HealthChange", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Assignment2Character_eventUpdateHealth_Parms, HealthChange), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HealthChange,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Power" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+				{ "ToolTip", "void ReceivePointDamage(float Damage, const class UDamageType * DamageType, FVector HitLocation, FVector HitNormal, class UPrimitiveComponent * HitComponent, FName BoneName, FVector ShotFromDirection, class AController * InstigatedBy, AActor * DamageCauser, const FHitResult & HitInfo);" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AAssignment2Character, "UpdateHealth", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(Assignment2Character_eventUpdateHealth_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AAssignment2Character_NoRegister()
 	{
@@ -43,6 +164,13 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 				(UObject* (*)())Z_Construct_UClass_ACharacter,
 				(UObject* (*)())Z_Construct_UPackage__Script_Assignment2,
 			};
+			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_AAssignment2Character_DamageTimer, "DamageTimer" }, // 751323102
+				{ &Z_Construct_UFunction_AAssignment2Character_GetHealth, "GetHealth" }, // 3951467985
+				{ &Z_Construct_UFunction_AAssignment2Character_GetHealthIntText, "GetHealthIntText" }, // 2071065719
+				{ &Z_Construct_UFunction_AAssignment2Character_SetDamageState, "SetDamageState" }, // 574724739
+				{ &Z_Construct_UFunction_AAssignment2Character_UpdateHealth, "UpdateHealth" }, // 3984496593
+			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 				{ "HideCategories", "Navigation" },
@@ -51,13 +179,34 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 			};
 #endif
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HasKey_MetaData[] = {
-				{ "Category", "Assignment2Character" },
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_redFlash_MetaData[] = {
+				{ "Category", "Health" },
 				{ "ModuleRelativePath", "Assignment2Character.h" },
 			};
 #endif
-			auto NewProp_HasKey_SetBit = [](void* Obj){ ((AAssignment2Character*)Obj)->HasKey = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_HasKey = { UE4CodeGen_Private::EPropertyClass::Bool, "HasKey", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000004, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AAssignment2Character), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_HasKey_SetBit)>::SetBit, METADATA_PARAMS(NewProp_HasKey_MetaData, ARRAY_COUNT(NewProp_HasKey_MetaData)) };
+			auto NewProp_redFlash_SetBit = [](void* Obj){ ((AAssignment2Character*)Obj)->redFlash = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_redFlash = { UE4CodeGen_Private::EPropertyClass::Bool, "redFlash", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AAssignment2Character), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_redFlash_SetBit)>::SetBit, METADATA_PARAMS(NewProp_redFlash_MetaData, ARRAY_COUNT(NewProp_redFlash_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HealthPercentage_MetaData[] = {
+				{ "Category", "Health" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HealthPercentage = { UE4CodeGen_Private::EPropertyClass::Float, "HealthPercentage", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(AAssignment2Character, HealthPercentage), METADATA_PARAMS(NewProp_HealthPercentage_MetaData, ARRAY_COUNT(NewProp_HealthPercentage_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
+				{ "Category", "Health" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health = { UE4CodeGen_Private::EPropertyClass::Float, "Health", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(AAssignment2Character, Health), METADATA_PARAMS(NewProp_Health_MetaData, ARRAY_COUNT(NewProp_Health_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FullHealth_MetaData[] = {
+				{ "Category", "Health" },
+				{ "ModuleRelativePath", "Assignment2Character.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FullHealth = { UE4CodeGen_Private::EPropertyClass::Float, "FullHealth", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(AAssignment2Character, FullHealth), METADATA_PARAMS(NewProp_FullHealth_MetaData, ARRAY_COUNT(NewProp_FullHealth_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUsingMotionControllers_MetaData[] = {
 				{ "Category", "Gameplay" },
@@ -191,7 +340,10 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1P = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1P", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AAssignment2Character, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1P_MetaData, ARRAY_COUNT(NewProp_Mesh1P_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HasKey,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_redFlash,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HealthPercentage,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Health,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FullHealth,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bUsingMotionControllers,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FireAnimation,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FireSound,
@@ -215,7 +367,7 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 				&AAssignment2Character::StaticClass,
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00800080u,
-				nullptr, 0,
+				FuncInfo, ARRAY_COUNT(FuncInfo),
 				PropPointers, ARRAY_COUNT(PropPointers),
 				"Game",
 				&StaticCppClassTypeInfo,
@@ -226,7 +378,7 @@ void EmptyLinkFunctionForGeneratedCodeAssignment2Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAssignment2Character, 2433239995);
+	IMPLEMENT_CLASS(AAssignment2Character, 3060574477);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AAssignment2Character(Z_Construct_UClass_AAssignment2Character, &AAssignment2Character::StaticClass, TEXT("/Script/Assignment2"), TEXT("AAssignment2Character"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAssignment2Character);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

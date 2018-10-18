@@ -7,6 +7,7 @@
 #include "Assignment2Character.generated.h"
 
 class UInputComponent;
+class UTimelineComponent;
 
 UCLASS(config=Game)
 class AAssignment2Character : public ACharacter
@@ -51,6 +52,10 @@ public:
 protected:
 	virtual void BeginPlay();
 
+	virtual void Tick(float DeltaTime) override;
+
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser);
+
 public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -80,8 +85,46 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
 
-	UPROPERTY(BlueprintReadWrite, Category = Assignment2Character)
-	bool HasKey;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float FullHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float Health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		float HealthPercentage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+		bool redFlash;
+
+	float CurveFloatValue;
+	float TimelineValue;
+
+	UTimelineComponent* MyTimeline;
+	struct FTimerHandle MemberTimerHandle;
+	struct FTimerHandle MagicTimerHandle;
+
+	/** Get Health */
+	UFUNCTION(BlueprintPure, Category = "Health")
+		float GetHealth();
+
+	/** Get Health Text */
+	UFUNCTION(BlueprintPure, Category = "Health")
+		FText GetHealthIntText();
+
+	/** Damage Timer */
+	UFUNCTION()
+		void DamageTimer();
+
+	/** Set Damage State */
+	UFUNCTION()
+		void SetDamageState();
+
+	// void ReceivePointDamage(float Damage, const class UDamageType * DamageType, FVector HitLocation, FVector HitNormal, class UPrimitiveComponent * HitComponent, FName BoneName, FVector ShotFromDirection, class AController * InstigatedBy, AActor * DamageCauser, const FHitResult & HitInfo);
+
+	UFUNCTION(BlueprintCallable, Category = "Power")
+		void UpdateHealth(float HealthChange);
+
 
 protected:
 	
