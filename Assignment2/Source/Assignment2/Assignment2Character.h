@@ -105,7 +105,6 @@ public:
 
 	UTimelineComponent* MyTimeline;
 	struct FTimerHandle MemberTimerHandle;
-	struct FTimerHandle MagicTimerHandle;
 
 	/** Get Health */
 	UFUNCTION(BlueprintPure, Category = "Health")

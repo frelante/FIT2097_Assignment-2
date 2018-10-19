@@ -23,9 +23,9 @@
 /wd4838
 /w44668
 /I G:\FORTNITE\UE_4.19\Engine\Source
-/I G:\FORTNITE\Assignment2\Source
-/I G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Inc\Assignment2
-/I G:\FORTNITE\Assignment2\Source\Assignment2
+/I G:\Github\FIT2097_Assignment2\Assignment2\Source
+/I G:\Github\FIT2097_Assignment2\Assignment2\Intermediate\Build\Win64\UE4Editor\Inc\Assignment2
+/I G:\Github\FIT2097_Assignment2\Assignment2\Source\Assignment2
 /I G:\FORTNITE\UE_4.19\Engine\Source\Runtime\Core\Public
 /I G:\FORTNITE\UE_4.19\Engine\Source\Runtime\Core\Public\Internationalization
 /I G:\FORTNITE\UE_4.19\Engine\Source\Runtime\Core\Public\Async
@@ -363,9 +363,9 @@
 /FI"G:\FORTNITE\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"G:\FORTNITE\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"G:\FORTNITE\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Inc\Assignment2\Assignment2Projectile.gen.cpp"
-/FI"G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\Assignment2\Definitions.Assignment2.h"
-/Fo"G:\FORTNITE\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\Assignment2\Assignment2Projectile.gen.cpp.obj"
+"G:\Github\FIT2097_Assignment2\Assignment2\Intermediate\Build\Win64\UE4Editor\Inc\Assignment2\Assignment2Projectile.gen.cpp"
+/FI"G:\Github\FIT2097_Assignment2\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\Assignment2\Definitions.Assignment2.h"
+/Fo"G:\Github\FIT2097_Assignment2\Assignment2\Intermediate\Build\Win64\UE4Editor\Development\Assignment2\Assignment2Projectile.gen.cpp.obj"
 /TP
 /GR-
 /W4
